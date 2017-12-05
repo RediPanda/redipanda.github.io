@@ -146,30 +146,30 @@
         <tr>
             <td>Username</td>
             <td> :
-                <input type="text" id="username" value="COLONEL MESSI" />
+                <input type="text" id="username" value="USER<ID>" />
             </td>
         </tr>
         <tr>
-            <td>Free Gold</td>
+            <td>ServiceID</td>
             <td> :
                 <input type="text" id="t_gold" value="9,999" />
             </td>
         </tr>
         <tr>
-            <td>Free Elixir</td>
+            <td>ServerID</td>
             <td> :
                 <input type="text" id="t_elixir" value="8,888" />
             </td>
         </tr>
         <tr>
-            <td>Free Gems</td>
+            <td>CDN Location</td>
             <td> :
                 <input type="text" id="t_gem" value="7,777" />
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <button id="butonku">Generate</button>
+                <button id="butonku">Check</button>
             </td>
         </tr>
     </table>
@@ -205,7 +205,7 @@
             var id = 1;
             var numray = 0;
             var rand_angka = 5000;
-            var array1 = ["Connecting server", "Waiting respons...", "Connection stablished"];
+            var array1 = ["Connecting to server...", "Waiting for CDN feedback", "CDN feedback connected!"];
             var array2 = [
                 "Importing Packets!",
                 "COC_SERVER -Imported.",
@@ -238,7 +238,7 @@
                 "C_FINISHED",
                 "@SAVE FOR C_"
             ];
-            var array3 = ["Server Response Ok", "Generating Packets for  " + vgold + "  Gold", "Generating Packets for  " + velixir + "  Elixir", "Generating Packets for  " + vgem + "  Gem", "Generating Resources", "Done"];
+            var array3 = ["Server Response Ok", "Checking Services for  " + vgold + "  Gold", "Checking Servers for  " + velixir + "  Elixir", "Checking Location for  " + vgem + "  Gem", "Generating Resources", "Done"];
             myvar = setTimeout(myfunc, rand_angka);
             function myfunc() {
                 if (id == array1.length + 1) {
@@ -273,7 +273,7 @@
                     $('.procesfoot').html('');
                     clearInterval(myvar3);
                     $('.loader').hide("slow");
-                    alert("Successful create fake progress generator bar")
+                    alert("All services are online!")
                 } else {
                     $('.title').html(array3[xxnumray]);
                     xxnumray++;
